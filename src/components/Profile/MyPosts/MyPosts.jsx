@@ -12,7 +12,7 @@ const MyPosts = () => {
 
             </div>
             <div className={style.posts}>
-                <Post message="Hi, it's Eziz" />
+                <Post message="Hi, it's Eziz" time="23:47"/>
                 <Post message="It's my first message" likes="2"/>
             </div>
         </div>
