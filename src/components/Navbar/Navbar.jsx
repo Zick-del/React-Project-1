@@ -1,15 +1,59 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import style from './Navbar.module.css'
+import s from './Navbar.module.css'
 
 const Navbar = () => {
     return (
-        <nav className={style.nav}>
-            <div className={`${style.item} ${style.active}`}><NavLink to="/profile">Profile</NavLink></div>
-            <div className={style.item}><NavLink to="/dialogs">Messages</NavLink></div>
-            <div className={style.item}><NavLink to=' '>News</NavLink></div>
-            <div className={style.item}><NavLink to=' '>Music</NavLink></div>
-            <div className={style.item}><NavLink to=' '>Settings</NavLink></div>
+        <nav className={s.nav}>
+            <div className={s.item}>
+                <NavLink
+                    to="/profile"
+                    s={({ isActive }) => {
+                        return {
+                            color: isActive ? "red" : ""
+                        };
+                    }}>Profile</NavLink>
+            </div>
+
+            <div className={s.item}>
+                <NavLink
+                    to="/dialogs"
+                    s={({ isActive }) => {
+                        return {
+                            color: isActive ? "red" : ""
+                        };
+                    }}>Messages</NavLink>
+            </div>
+
+            <div className={s.item}>
+                <NavLink
+                    to=' '
+                    s={({ isActive }) => {
+                        return {
+                            color: isActive ? "red" : ""
+                        };
+                    }}>News</NavLink>
+            </div>
+
+            <div className={s.item}>
+                <NavLink
+                    to=' '
+                    s={({ isActive }) => {
+                        return {
+                            color: isActive ? "red" : ""
+                        };
+                    }}>Music</NavLink>
+            </div>
+
+            <div className={s.item}>
+                <NavLink
+                    to=' '
+                    s={({ isActive }) => {
+                        return {
+                            color: isActive ? "red" : ""
+                        };
+                    }}>Settings</NavLink>
+            </div>
         </nav>
 
     )

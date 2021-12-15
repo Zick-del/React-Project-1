@@ -4,5 +4,6 @@
   
   .header {
     grid-area: h;
-    background-color: #FFFC00
+    background-color: #FFFC00;
+    border-radius: 7px;
   }
