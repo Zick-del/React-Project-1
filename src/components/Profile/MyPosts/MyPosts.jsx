@@ -4,6 +4,15 @@ import Post from "./Post/Post";
 
 
 const MyPosts = () => {
+
+    let postsData = [
+        { id: 1, message: "Hi, it's Eziz", time: "23:47", likes: 17 },
+        { id: 2, message: "It's my first message", time: "15:00", likes: 2 }
+    ]
+
+    let posts = postsData
+        .map(p => <Post message={p.message} time={p.time} likes={p.likes} />)
+
     return (
         <div className={s.feed}>My posts
             <div>
@@ -12,8 +21,7 @@ const MyPosts = () => {
 
             </div>
             <div className={s.posts}>
-                <Post message="Hi, it's Eziz" time="23:47"/>
-                <Post message="It's my first message" likes="2"/>
+                {posts}
             </div>
         </div>
     )
